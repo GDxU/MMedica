@@ -1,5 +1,8 @@
 package com.hkm.shake.Elements;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -13,6 +16,8 @@ public abstract class GameActor extends Actor {
     protected Body body;
     protected UserData userData;
     protected Rectangle screenRectangle;
+
+
 
     public GameActor(Body body) {
         this.body = body;
@@ -48,5 +53,7 @@ public abstract class GameActor extends Actor {
     protected float transformToScreen(float n) {
         return Constants.WORLD_TO_SCREEN * n;
     }
+
+
 
 }

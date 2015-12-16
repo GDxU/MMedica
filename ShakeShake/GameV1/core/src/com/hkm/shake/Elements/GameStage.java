@@ -66,7 +66,6 @@ public class GameStage extends Stage implements ContactListener {
         float halfScreenH = getCamera().viewportHeight / 2;
         screenLeftSide = new Rectangle(0, 0, halfScreenW, getCamera().viewportHeight);
         screenRightSide = new Rectangle(halfScreenW, 0, halfScreenW, getCamera().viewportHeight);
-
         Gdx.input.setInputProcessor(this);
     }
 
@@ -77,10 +76,8 @@ public class GameStage extends Stage implements ContactListener {
     }
 
     private void setUpWorld() {
-
         world = WorldUtils.createWorld();
         world.setContactListener(this);
-
         setUpBackground();
         setUpGround();
         setUpRunner();
@@ -143,7 +140,9 @@ public class GameStage extends Stage implements ContactListener {
     @Override
     public void draw() {
         super.draw();
-        renderer.render(world, camera.combined);
+        if (renderer != null) {
+            renderer.render(world, camera.combined);
+        }
     }
 
     @Override
