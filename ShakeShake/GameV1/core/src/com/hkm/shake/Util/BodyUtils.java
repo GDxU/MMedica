@@ -1,7 +1,8 @@
 package com.hkm.shake.Util;
 
 import com.badlogic.gdx.physics.box2d.Body;
-import com.hkm.shake.Elements.UserData;
+import com.hkm.shake.Elements.Indicators.UserDataType;
+import com.hkm.shake.Elements.box2d.UserData;
 
 /**
  * Created by zJJ on 12/16/2015.
